@@ -1,23 +1,31 @@
-# House Price Prediction using Linear Regression from Scratch
+# 🏠 House Price Prediction using Linear Regression from Scratch
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FkwxzrLHnKxnye2J-987_WL7RPp0QkQ8?usp=sharing)
 
 ## Overview
 
-This project implements **Simple Linear Regression from scratch using Gradient Descent** to predict house prices based on living area.
+This project implements **Simple Linear Regression from Scratch using Gradient Descent** to predict house prices based on living area.
 
 Instead of relying on machine learning libraries such as Scikit-Learn, the model was built manually to understand the mathematical foundations behind Linear Regression and Gradient Descent.
 
 The project covers the complete machine learning workflow:
 
-- Data Loading
-- Data Preprocessing
-- Feature Normalization
-- Cost Function Implementation
-- Gradient Computation
-- Gradient Descent Optimization
-- House Price Prediction
-- Data Visualization
+* Data Loading
+* Data Preprocessing
+* Feature Normalization
+* Cost Function Implementation
+* Gradient Computation
+* Gradient Descent Optimization
+* House Price Prediction
+* Data Visualization
+
+---
+
+## Project Preview
+
+### Predicted Prices vs Actual Data
+
+![Regression Plot](images/Predicted_Prices.png)
 
 ---
 
@@ -27,21 +35,21 @@ The project uses the **House Price India Dataset**.
 
 ### Feature Used
 
-- Living Area (Square Feet)
+* Living Area (Square Feet)
 
 ### Target Variable
 
-- House Price
+* House Price
 
 ---
 
 ## Technologies Used
 
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Google Colab
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* Google Colab
 
 ---
 
@@ -49,43 +57,53 @@ The project uses the **House Price India Dataset**.
 
 ### Feature Normalization
 
-The input feature and target values are normalized using standardization:
+Input features and target values are standardized before training:
 
-\[
-x_{norm}=\frac{x-\mu}{\sigma}
-\]
+x_norm = (x - mean) / std
 
-This helps Gradient Descent converge faster and more efficiently.
+Feature normalization helps Gradient Descent converge faster and improves training stability.
 
 ---
 
 ### Cost Function
 
-Mean Squared Error (MSE) based cost function:
+The model uses Mean Squared Error (MSE) as the cost function.
 
-\[
-J(w,b)=\frac{1}{2m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)})-y^{(i)})^2
-\]
+Cost = (1 / 2m) × Σ(Predicted Value − Actual Value)²
+
+The objective of Gradient Descent is to minimize this cost.
 
 ---
 
 ### Gradient Descent
 
-Parameters are updated iteratively using:
+Model parameters are updated iteratively using:
 
-\[
-w := w-\alpha \frac{\partial J}{\partial w}
-\]
+w = w − α × dj_dw
 
-\[
-b := b-\alpha \frac{\partial J}{\partial b}
-\]
+b = b − α × dj_db
 
 where:
 
-- \( \alpha \) = Learning Rate
-- \( w \) = Weight
-- \( b \) = Bias
+* α = Learning Rate
+* w = Weight
+* b = Bias
+
+---
+
+## Visualizations
+
+### Living Area vs House Price
+
+![Living Area vs Price](images/LivingArea%20vs%20Price.png)
+
+### Regression Line vs Actual Data
+
+![Regression Plot](images/Predicted_Prices.png)
+
+### Gradient Descent Convergence
+
+![Cost Function](images/Cost%20vs%20Iterations.png)
 
 ---
 
@@ -95,35 +113,20 @@ The model successfully learns the relationship between living area and house pri
 
 ### Key Observations
 
-- House price generally increases with living area.
-- Living area alone cannot fully explain house prices.
-- Additional features such as bedrooms, bathrooms, floors, and location would improve prediction accuracy.
-
----
-
-## Visualizations
-
-### Regression Line vs Actual Data
-
-```markdown
-![Regression Plot](images/Predicted_Prices.png)
-```
-
-### Gradient Descent Convergence
-
-```markdown
-![Cost Function](images/Cost_vs_Iterations.png)
-```
+* House price generally increases with living area.
+* Living area alone cannot fully explain house prices.
+* Significant variation exists in prices for houses with similar living areas.
+* Additional features such as bedrooms, bathrooms, floors, and location would improve prediction accuracy.
 
 ---
 
 ## Sample Prediction
 
 ```text
-Enter Size of house in Sq. Ft: 2000
+Enter Size of house in Sq. Ft: 500
 
 Predicted House Price:
-₹XXXXXXXX
+$88451.33682985336
 ```
 
 ---
@@ -137,8 +140,9 @@ House-Price-Prediction-Linear-Regression/
 ├── README.md
 │
 └── images/
-    ├── regression_plot.png
-    └── cost_vs_iterations.png
+    ├── Cost vs Iterations.png
+    ├── LivingArea vs Price.png
+    └── Predicted_Prices.png
 ```
 
 ---
@@ -147,25 +151,25 @@ House-Price-Prediction-Linear-Regression/
 
 Through this project, I gained hands-on experience with:
 
-- Linear Regression
-- Gradient Descent
-- Feature Scaling
-- Cost Functions
-- Data Visualization
-- Machine Learning Fundamentals
+* Linear Regression
+* Gradient Descent
+* Feature Scaling
+* Cost Functions
+* Data Visualization
+* Machine Learning Fundamentals
 
-Most importantly, I learned how Linear Regression actually works behind the scenes instead of treating machine learning models as a black box.
+Most importantly, I learned how Linear Regression works behind the scenes instead of treating machine learning models as a black box.
 
 ---
 
 ## Future Improvements
 
-- Multiple Linear Regression
-- Train/Test Split
-- R² Score Evaluation
-- RMSE and MAE Metrics
-- Feature Engineering
-- Model Comparison with Scikit-Learn
+* Multiple Linear Regression
+* Train/Test Split
+* R² Score Evaluation
+* RMSE and MAE Metrics
+* Feature Engineering
+* Model Comparison with Scikit-Learn
 
 ---
 
@@ -181,8 +185,6 @@ https://colab.research.google.com/drive/1FkwxzrLHnKxnye2J-987_WL7RPp0QkQ8?usp=sh
 
 **Prakhar Tagra**
 
-GitHub:
-https://github.com/PrakharTagra
+GitHub: https://github.com/PrakharTagra
 
-Repository:
-https://github.com/PrakharTagra/House-Price-Prediction-Linear-Regression
+Repository: https://github.com/PrakharTagra/House-Price-Prediction-Linear-Regression
