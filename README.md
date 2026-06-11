@@ -1,4 +1,4 @@
-# 🏠 House Price Prediction using Linear Regression from Scratch
+# 🏠 House Price Prediction using Simple Linear Regression from Scratch
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FkwxzrLHnKxnye2J-987_WL7RPp0QkQ8?usp=sharing)
 
@@ -31,7 +31,8 @@ The project covers the complete machine learning workflow:
 
 ## Dataset
 
-The project uses the **House Price India Dataset**.
+Dataset Source:
+[https://www.kaggle.com/datasets](https://www.kaggle.com/datasets/saincoder404/india-house-prices)
 
 ### Feature Used
 
@@ -54,6 +55,19 @@ The project uses the **House Price India Dataset**.
 ---
 
 ## Machine Learning Concepts Implemented
+
+### Hypothesis Function
+
+The model predicts house prices using:
+
+y = wx + b
+
+where:
+
+* x = Living Area
+* w = Weight
+* b = Bias
+* y = Predicted House Price
 
 ### Feature Normalization
 
@@ -126,9 +140,9 @@ The model successfully learns the relationship between living area and house pri
 Enter Size of house in Sq. Ft: 500
 
 Predicted House Price:
-$88451.33682985336
+88451.33682985336
 ```
-
+Note: Prices are in the original dataset units.
 ---
 
 ## Repository Structure
